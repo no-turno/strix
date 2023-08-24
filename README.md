@@ -1,7 +1,10 @@
-# Bun Starter
+# Blank template
 
-Quickly get started with [Bun](https://bun.sh/) using this starter! Bun is a fast all-in-one JavaScript runtime with a focus on speed.
+This is a blank project with a static html file.
 
-- This starter starts a Bun HTTP server on [localhost:3000](http://localhost:3000).
-- You can check [http.ts](./http.ts) to see how the server is started.
-- If you want to upgrade Bun, you can change `BUN_VERSION` in the [Dockerfile](./.codesandbox/Dockerfile).
+[Configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) has been added to optimize it for [CodeSandbox Projects](https://codesandbox.io/p/dashboard).
+
+## Resources
+
+- [CodeSandbox Projects — Docs](https://codesandbox.io/docs/projects)
+- [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)
