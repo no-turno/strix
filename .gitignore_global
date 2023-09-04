@@ -1,0 +1,11 @@
+**/node_modules/
+**/.cache/
+**/.codesandbox/
+**/.env*
+**/.env*local
+**/bun.lockb
+**/package-lock.json
+**/yarn.lock
+**/tmp/
+# gyoza files
+./gyoza/files/

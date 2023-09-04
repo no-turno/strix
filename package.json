@@ -1,5 +1,9 @@
 {
   "name": "strix-workspace",
   "workspaces": ["packages/*", "apps/*"],
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "devDependencies": {
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3"
+  }
 }
