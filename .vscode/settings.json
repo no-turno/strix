@@ -1,0 +1,16 @@
+{
+    "explorer.sortOrder": "filesFirst",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "github.copilot.advanced": {
+        "authProvider": "github",
+    },
+    "github.copilot.inlineSuggest.enable": true,
+    "typescript.experimental.aiQuickFix": true,
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+    "typescript.enablePromptUseWorkspaceTsdk": true
+}
