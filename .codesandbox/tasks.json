@@ -1,13 +1,29 @@
 {
   // These tasks will run in order when initializing your CodeSandbox project.
-  "setupTasks": ["bun x typescript-language-server --stdio"],
+  "setupTasks": [
+    {
+      "name": "bun install",
+      "command": "bun install"
+    },
+    {
+      "name": "bun x typescript-language-server --stdio",
+      "command": "bun x typescript-language-server --stdio"
+    }
+  ],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "Start": {
-      "name": "Start",
-      "command": "bun run http.ts",
-      "runAtStart": true
+    "start server": {
+      "name": "start:server",
+      "command": "bun run --cwd=./apps/server dev",
+      "runAtStart": true,
+        "preview": {
+        "port": 3000
+      }
+    },
+    "start client": {
+      "name": "start:client",
+      "command": "bun run --cwd=./apps/client dev"
     }
   }
 }

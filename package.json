@@ -1,0 +1,5 @@
+{
+  "name": "strix-workspace",
+  "workspaces": ["packages/*", "apps/*"],
+  "version": "1.0.0"
+}

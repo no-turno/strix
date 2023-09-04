@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "module": "index.ts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch ./src/http.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@stricjs/router": "^4.1.6",
+    "@stricjs/utils": "^1.4.7"
+  }
+}
