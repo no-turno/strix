@@ -1,11 +1,15 @@
-import { Router } from '@stricjs/router';
-import { group } from '@stricjs/utils';
-import { BunFile } from 'bun';
-const pagesPublicDir = {baseURL: () => import.meta.dir + "/public", match(path: string) {
-    return this.baseURL() + path
-}}
+import { Router } from "@stricjs/router";
+import { group } from "@stricjs/utils";
+import { loaders } from "./utils";
+import pagesEntrySSR from "./public/ssr.entry";
 
-const loadIndexPage = (dir: string) => Bun.file(dir)
-const returnPageResponse = (file: BunFile) => new Response(file)
+const pagesPublicDir = {
+  baseURL: await pagesEntrySSR(),
+};
+
 export default new Router()
-    .plug(group(pagesPublicDir.baseURL())).get("/", () => returnPageResponse(loadIndexPage(pagesPublicDir.match("/index.html")))); 
+  .plug(group(pagesPublicDir.baseURL))
+  .store("url", pagesPublicDir.baseURL)
+  .get("/", ({controller}, store) => {
+    return loaders.returnPageResponse(Bun.file(store.url + "/index.html"));
+  });
